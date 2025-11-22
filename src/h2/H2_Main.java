@@ -3,11 +3,15 @@ package h2;
 public class H2_Main {
     public static void main(String[] args) {
 
-        int[] x = {1,2,3,4};
-        int[] y = {1,2,3,4};
+        int[] a = {1,2,3};
+        int[] b = {1,2,4};
+        int[] c = {1,3,2};
+        int[] d = {1,2};
+        int[] e = {1,2,3};
 
-        comparearrays(x,y);
-        System.out.println("Gleich: " + comparearrays(x,y));
+
+        comparearrays(a,e); // unnötig
+        System.out.println("Gleich: " + comparearrays(e,a));
     }
 
     public static boolean comparearrays(int[] a, int[] b) {
