@@ -10,11 +10,11 @@ public class H2_Main {
         int[] e = {1,2,3};
 
 
-        comparearrays(a,e); // unnötig
-        System.out.println("Gleich: " + comparearrays(e,a));
+        compareArrays(a,e); // unnötig
+        System.out.println("Gleich: " + compareArrays(e,a));
     }
 
-    public static boolean comparearrays(int[] a, int[] b) {
+    public static boolean compareArrays(int[] a, int[] b) {
         if (a.length != b.length) {
             return false;
         }
