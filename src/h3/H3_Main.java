@@ -11,15 +11,29 @@ public class H3_Main {
         int[] f = {1,1,2};
 
         //compareArraysVal(a,b);
-        System.out.println("Gleicher Inhalt: " + compareArraysVal(a,b));
+        System.out.println("Gleicher Inhalt: " + compareArraysVal(a,f));
     }
     public static boolean compareArraysVal(int[] a, int[] b) {
         if (a.length != b.length) {
             return false;
         }
-        for (int i = 0, j = 0; i < a.length; i++) {
-            if (a[i] == b[j]) {
-                b[j] = b[j] + 1;
+        for (int i = 0; i < a.length;i++) {
+            int cellVal = a[i];
+            int aVal = 0;
+            int bVal = 0;
+
+            for (int j = 0; j < a.length;j++) {
+                if (a[j] == cellVal) {
+                    aVal++;
+                }
+            }
+            for (int k = 0; k < b.length;k++) {
+                if (b[k] == cellVal) {
+                    bVal++;
+                }
+            }
+            if (aVal != bVal) {
+                return false;
             }
         }
         return true;
